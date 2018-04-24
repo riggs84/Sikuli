@@ -17,6 +17,10 @@ public class main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        App app = new App("GoodSync Synchronizer");
+        System.out.println(app.getName());
+        app.focus("GoodSync Synchronizer");
+        System.out.println(app.getName());
 
 
         Screen s = new Screen();
@@ -56,7 +60,7 @@ public class main {
         } else {
             System.out.print("test has failed");
         }
-        App app = new App("GoodSync Synchronizer");
+
         app.close();
 
         /*Target target = new ImageTarget(new File("C:\\Excersises\\btn.png"));
