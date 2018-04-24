@@ -1,5 +1,6 @@
 import org.sikuli.script.App;
 import org.sikuli.script.FindFailed;
+import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 
 import java.io.File;
@@ -18,14 +19,18 @@ public class main {
             e.printStackTrace();
         }
         App app = new App("GoodSync Synchronizer");
+        app.open();
         System.out.println(app.getName());
         app.focus("GoodSync Synchronizer");
         System.out.println(app.getName());
 
 
+
         Screen s = new Screen();
+        Pattern btnNewJobs = new Pattern("src/img/btn1.png").similar(0.50f);
         try {
-            s.click("src/img/btn.png");
+            //s.click("src/img/btn1.png");
+            s.click(btnNewJobs);
         } catch (FindFailed findFailed) {
             findFailed.printStackTrace();
         }
